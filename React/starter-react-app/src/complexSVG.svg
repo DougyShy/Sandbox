@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <!-- Complex Gradient Background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#grad1)" />
+
+  <!-- Complex Shape with High Detail -->
+  <path d="M250 500 L750 500 Q900 600 800 800 Q700 950 500 900 Q300 950 200 800 Q100 600 250 500 Z
+           M300 500 Q400 550 500 600 Q600 550 700 500" fill="none" stroke="black" stroke-width="5" />
+
+  <!-- High Number of Repeated Elements -->
+  <g fill="blue" stroke="black" stroke-width="1">
+    <circle cx="500" cy="500" r="20" />
+    <circle cx="510" cy="510" r="20" />
+    <circle cx="520" cy="520" r="20" />
+    <!-- Repeat this pattern for hundreds of circles -->
+    <!-- ... -->
+  </g>
+
+  <!-- Complex Filter Effect -->
+  <filter id="f1" x="0" y="0" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    <feOffset dx="10" dy="10" result="offsetblur" />
+    <feMerge>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+  <text x="100" y="200" font-family="Verdana" font-size="35" fill="black" filter="url(#f1)">Heavyweight SVG</text>
+
+  <!-- Embedded Image -->
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAC/J...
+         ..." x="200" y="300" height="200px" width="200px" />
+</svg>
