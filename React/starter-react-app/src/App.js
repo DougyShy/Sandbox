@@ -259,6 +259,29 @@ function MyErrorBoundaryComponent() {
   );
 }
 
+/*class ClickButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    console.log('Button clicked');
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}*/
+
+function ClickButton() {
+  function handleClick() {
+    console.log('Button clicked');
+  }
+  return <button onClick={handleClick}>Click deez nuts</button>;
+}
+
+//////// THIS IS WHERE ALL THE MAGIC HAPPENS ////////////////
+
 function App() {
 
   const element = <Welcome name="React Developer" />;
@@ -300,7 +323,7 @@ function App() {
         {Calculator()}
         {getMouseCoords()}
         {/*MyErrorBoundaryComponent*/}
-        
+        <ClickButton />
       </header>
     </div>
   );
